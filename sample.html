@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Registration For Tourism</title>
+<style>
+  body {
+  background-image: url("s1.jpg");
+  background-color:aliceblue;
+ 
+
+}
+  h3 {
+  font-family: Calibri;
+  font-size: 25pt;
+  font-style: normal;
+  font-weight: bold;
+  color: SlateBlue;
+  text-align: center;
+background-color:white;
+  text-decoration: underline;
+}
+.bg-img {
+ 
+  background-image: url("s1.jpg");
+
+  min-height: 380px;
+
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+table {
+  font-family: Calibri;
+  color: black;
+  font-size: 11pt;
+  font-style: normal;
+  font-weight: bold;
+  text-align:left;
+  background-color: #DAF7A6 ;
+  border-collapse: collapse;
+  
+}
+table.inner {
+  border: 0px;
+}
+#btn{
+  font-size: 25px;  
+  text-align: center;  
+}
+.con{
+  text-align: center;    
+width: 100px;  
+height: 50px;  
+padding-top: 100px;  
+
+}
+  </style>
+  
+<script>
+  function validateForm() {
+  var firstname = document.forms["myForm"]["uname"].value;
+  if (firstname == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+    if(!isNaN(firstname))
+{
+alert("Please Enter Only Characters");
+document.myForm.uname.select();
+return false;
+}
+
+if(firstname!="vishnu")
+{
+
+  alert("please enter correct name");
+
+}
+  
+
+ 
+var a = document.myForm.psw.value;
+if(a=="")
+{
+alert("Please Enter Your Password");
+document.myForm.psw.focus();
+return false;
+}
+if ((a.length < 4) || (a.length > 8))
+{
+alert("Your Password must be 4 to 8 Character and should be strong");
+document.myForm.psw.select();
+return false;
+}
+if(a!="vishnu")
+{
+
+alert("please enter correct password");
+
+}
+
+}
+ </script>
+</head>
+ 
+<body class="bg-img">
+<h3 align="center">LOGIN HERE</h3>
+
+<form name="myForm"  onsubmit="return validateForm()">
+
+
+
+
+<table align="center" cellpadding = "10">
+
+<!----- First Name ------>
+<tr>
+<td>USER NAME
+ <input type="text" placeholder="Username" name="uname" maxlength="20">
+
+</td>
+</tr>
+ 
+ 
+ 
+<!----- Email Id ----->
+<tr>
+    <td> PASSWORD<input type="password"placeholder="Password" name="psw" maxlength="8"/>
+    
+    
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+        </td>
+        </tr>
+    
+    
+ 
+<tr class="con">
+<td id="last" colspan="2" text-align="center">
+  <input type="submit" value="LOGIN">
+<!----- Submit  ---------->
+<tr>
+  <td  align="center">   <a href="AR.html">NEW USER</a>
+</td>
+</tr>
+</table>
+</form>
+
+
+
+
+
+</body>
+</html>
